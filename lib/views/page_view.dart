@@ -3,6 +3,7 @@ import 'package:ngao_app/views/verification.dart';
 
 import 'loading_screen.dart';
 import 'login_screen.dart';
+import 'productScreen.dart';
 import 'splash_screen.dart';
 
 class PageViewWidget extends StatefulWidget {
@@ -21,6 +22,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
         LoginScreen(),
         SplashOne(),
         VerificationScreen(),
+        ProductScreen(),
       ],
     );
   }

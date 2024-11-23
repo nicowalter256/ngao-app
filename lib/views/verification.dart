@@ -24,15 +24,15 @@ class _VerificationScreenState extends State<VerificationScreen> {
         children: [
           Center(
             child: Container(
-              height: 120,
-              width: 120,
+              padding: const EdgeInsets.all(25),
               decoration: BoxDecoration(
-                  color: whiteBG,
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    width: 5,
-                    color: greenBG,
-                  )),
+                color: whiteBG,
+                shape: BoxShape.circle,
+                border: Border.all(
+                  width: 7,
+                  color: greenBG,
+                ),
+              ),
               child: Image.asset(emailImage),
             ),
           ),
