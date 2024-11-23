@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ngao_app/views/loading_screen.dart';
 
 import 'views/login_screen.dart';
+import 'views/page_view.dart';
+import 'views/verification.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      //home: const VerificationScreen(),
+      home: const PageViewWidget(),
     );
   }
 }

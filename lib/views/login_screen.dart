@@ -44,15 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Align(
                     alignment: Alignment.topLeft,
-                    child: Text(
-                      "Hello,\nwelcome",
-                      style: GoogleFonts.mulish(
-                        textStyle: const TextStyle(
-                            fontSize: 40,
-                            color: greyBG,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
+                    child: Image.asset(welcomeImage),
                   ),
                   const SizedBox(height: 40),
                   CustomTextField(

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../constants/images.dart';
 
-class SplashOne extends StatelessWidget {
-  const SplashOne({super.key});
+class LoadingScreen extends StatelessWidget {
+  const LoadingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class SplashOne extends StatelessWidget {
           width: size.width,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(splashOneImage),
+              image: AssetImage(loadingImage),
             ),
           ),
         ),
