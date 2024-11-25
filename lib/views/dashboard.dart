@@ -12,10 +12,38 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+  final Widget _fab = FloatingActionButton(
+    backgroundColor: Colors.red,
+    onPressed: () {},
+    child: Container(
+      decoration: const BoxDecoration(
+        color: deepGreyBG,
+        image: DecorationImage(
+          image: AssetImage(group),
+          fit: BoxFit.cover,
+        ),
+      ),
+    ),
+  );
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     return Scaffold(
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 10),
+        child: Container(
+          height: 80.0,
+          width: 80.0,
+          decoration: const BoxDecoration(
+            color: Colors.transparent,
+            image: DecorationImage(
+              image: AssetImage(group),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: const BottomNavigationWidget(),
       backgroundColor: greenBG,
       body: SafeArea(

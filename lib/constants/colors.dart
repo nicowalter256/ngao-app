@@ -8,3 +8,4 @@ const Color greyBG = Color(0xFFD9D9D9);
 const Color greenBG = Color(0xFF007336);
 const Color cardBG = Color(0xFFF0F6EA);
 const Color containerBG = Color(0xFFE8E8E8);
+const Color deepGreyBG = Color(0xFFF1F1FB);

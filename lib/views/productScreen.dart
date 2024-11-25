@@ -20,6 +20,21 @@ class _ProductScreenState extends State<ProductScreen> {
     return Scaffold(
       bottomNavigationBar: const BottomNavigationWidget(),
       backgroundColor: containerBG,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 10),
+        child: Container(
+          height: 80.0,
+          width: 80.0,
+          decoration: const BoxDecoration(
+            color: Colors.transparent,
+            image: DecorationImage(
+              image: AssetImage(group),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: Column(
           children: [
