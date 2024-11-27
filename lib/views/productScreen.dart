@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../constants/colors.dart';
 import '../constants/images.dart';
 import '../constants/static_data.dart';
 import '../widgets/custom_bottom_navigation.dart';
+import '../widgets/floating_button.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -20,20 +20,7 @@ class _ProductScreenState extends State<ProductScreen> {
     return Scaffold(
       bottomNavigationBar: const BottomNavigationWidget(),
       backgroundColor: containerBG,
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Container(
-          height: 80.0,
-          width: 80.0,
-          decoration: const BoxDecoration(
-            color: Colors.transparent,
-            image: DecorationImage(
-              image: AssetImage(group),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      ),
+      floatingActionButton: const FloatingButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: Column(

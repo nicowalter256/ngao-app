@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'views/Loans/dashboard.dart';
+import 'views/Loans/dashboardTwo.dart';
+import 'views/dashboard.dart';
 import 'views/page_view.dart';
+import 'views/register/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +22,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: const DashboardScreen(),
-      home: const PageViewWidget(),
+      home: const DashboardTwo(),
+
+      //  home: const PageViewWidget(),
     );
   }
 }

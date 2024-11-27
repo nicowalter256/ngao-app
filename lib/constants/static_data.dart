@@ -1,3 +1,4 @@
+import 'colors.dart';
 import 'images.dart';
 
 List<Map<String, dynamic>> productList = [
@@ -63,5 +64,26 @@ List<Map<String, dynamic>> dashBoardTabsList = [
     "id": 6,
     "name": "View All Products",
     "icon": forward,
+  },
+];
+
+List<Map<String, dynamic>> loanList = [
+  {
+    "id": 1,
+    "name": "Make Payment",
+    "icon": payment,
+    "color": cardBG,
+  },
+  {
+    "id": 2,
+    "name": "Payment Schedule",
+    "icon": paymentSchedule,
+    "color": cardBG,
+  },
+  {
+    "id": 3,
+    "name": "View Loan Statement",
+    "icon": view,
+    "color": cardBG,
   },
 ];

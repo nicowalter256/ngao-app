@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ngao_app/views/verification.dart';
 
+import 'Loans/dashboard.dart';
+import 'Loans/dashboardTwo.dart';
 import 'dashboard.dart';
 import 'loading_screen.dart';
 import 'login_screen.dart';
@@ -27,6 +29,8 @@ class _PageViewWidgetState extends State<PageViewWidget> {
         VerificationScreen(),
         DashboardScreen(),
         ProductScreen(),
+        LoanDashboard(),
+        DashboardTwo(),
       ],
     );
   }
