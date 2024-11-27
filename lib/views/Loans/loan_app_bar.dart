@@ -7,8 +7,12 @@ import '../../constants/images.dart';
 class LoanAppBar extends StatelessWidget {
   final String title;
   final bool hideNotification;
+  final double? font;
   const LoanAppBar(
-      {super.key, required this.title, required this.hideNotification});
+      {super.key,
+      required this.title,
+      required this.hideNotification,
+      this.font});
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +47,10 @@ class LoanAppBar extends StatelessWidget {
             Text(
               title,
               style: GoogleFonts.mulish(
-                textStyle: const TextStyle(
-                    color: whiteBG, fontWeight: FontWeight.bold, fontSize: 40),
+                textStyle: TextStyle(
+                    color: whiteBG,
+                    fontWeight: FontWeight.bold,
+                    fontSize: font ?? 40),
               ),
             )
           ],

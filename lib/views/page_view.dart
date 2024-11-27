@@ -6,6 +6,7 @@ import 'Loans/dashboardTwo.dart';
 import 'dashboard.dart';
 import 'loading_screen.dart';
 import 'login_screen.dart';
+import 'payment/payment_screen.dart';
 import 'productScreen.dart';
 import 'splash_screen.dart';
 import 'welcome_screen.dart';
@@ -31,6 +32,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
         ProductScreen(),
         LoanDashboard(),
         DashboardTwo(),
+        PaymentScreen(),
       ],
     );
   }

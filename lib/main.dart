@@ -3,6 +3,7 @@ import 'views/Loans/dashboard.dart';
 import 'views/Loans/dashboardTwo.dart';
 import 'views/dashboard.dart';
 import 'views/page_view.dart';
+import 'views/payment/payment_screen.dart';
 import 'views/register/register.dart';
 
 void main() {
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DashboardTwo(),
+      // home: const PaymentScreen(),
 
-      //  home: const PageViewWidget(),
+      home: const PageViewWidget(),
     );
   }
 }
