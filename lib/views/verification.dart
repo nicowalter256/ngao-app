@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ngao_app/constants/colors.dart';
+import 'package:ngao_app/views/register/register.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../constants/images.dart';
 import '../widgets/custom_button.dart';
+import 'Loans/dashboard.dart';
+import 'productScreen.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -140,7 +144,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
               child: CustomButton(
                 btnColor: yellowBG,
                 textColor: whiteBG,
-                onPress: () => {},
+                onPress: () => {
+                  Get.to(const ProductScreen()),
+                },
                 name: "Proceed",
               ),
             ),

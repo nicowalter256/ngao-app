@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ngao_app/constants/images.dart';
 
 import '../constants/colors.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
+import 'Loans/dashboard.dart';
+import 'register/register.dart';
+import 'verification.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -77,7 +81,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomButton(
                     btnColor: yellowBG,
                     textColor: whiteBG,
-                    onPress: () => {},
+                    onPress: () => {
+                      Get.to(const VerificationScreen()),
+                    },
                     name: "Login",
                   ),
                   const SizedBox(height: 20),
@@ -92,7 +98,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomButton(
                     btnColor: yellowBG,
                     textColor: whiteBG,
-                    onPress: () => {},
+                    onPress: () => {
+                      Get.to(const RegisterScreen()),
+                    },
                     name: "Register Here",
                   ),
                   const SizedBox(height: 40),

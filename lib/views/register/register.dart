@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 import '../../constants/colors.dart';
 import '../../constants/images.dart';
-import '../../widgets/custom_border_text_field.dart';
-import '../../widgets/form_label.dart';
 import 'reg_stepper.dart';
 
 class RegisterScreen extends StatefulWidget {

@@ -34,7 +34,7 @@ class CustomDropdown extends StatelessWidget {
             color: blackBG.withOpacity(.05),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
             border: Border.all(
-              color: blackBG,
+              color: blackBG.withOpacity(0.4),
               width: 1,
             ),
           ),

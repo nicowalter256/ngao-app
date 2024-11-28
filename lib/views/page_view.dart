@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ngao_app/views/verification.dart';
 
+import 'Loans/apply/apply_loan.dart';
 import 'Loans/dashboard.dart';
 import 'Loans/dashboardTwo.dart';
 import 'dashboard.dart';
@@ -9,6 +10,7 @@ import 'login_screen.dart';
 import 'payment/payment_screen.dart';
 import 'payment/payment_success.dart';
 import 'productScreen.dart';
+import 'register/register.dart';
 import 'splash_screen.dart';
 import 'welcome_screen.dart';
 
@@ -27,6 +29,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
         WelcomeScreen(),
         LoadingScreen(),
         LoginScreen(),
+        RegisterScreen(),
         SplashOne(),
         VerificationScreen(),
         DashboardScreen(),
@@ -35,6 +38,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
         DashboardTwo(),
         PaymentScreen(),
         PaymentSuccess(),
+        ApplyLoan(),
       ],
     );
   }

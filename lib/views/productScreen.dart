@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/colors.dart';
 import '../constants/images.dart';
 import '../constants/static_data.dart';
 import '../widgets/custom_bottom_navigation.dart';
 import '../widgets/floating_button.dart';
+import 'Loans/dashboard.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -111,38 +113,44 @@ class _ProductScreenState extends State<ProductScreen> {
                   itemCount: productList.length,
                   itemBuilder: (BuildContext context, index) {
                     var data = productList[index];
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: cardBG,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: blackBG,
-                            blurRadius: 4,
-                            offset: Offset(1, 2),
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            data['icon'],
-                            height: 50,
-                          ),
-                          const SizedBox(height: 10),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              data['name'],
-                              style: GoogleFonts.mulish(
-                                textStyle: const TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 12),
-                              ),
+                    return GestureDetector(
+                      onTap: () => {
+                        Get.to(const LoanDashboard()),
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: cardBG,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: blackBG,
+                              blurRadius: 4,
+                              offset: Offset(1, 2),
                             ),
-                          )
-                        ],
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              data['icon'],
+                              height: 50,
+                            ),
+                            const SizedBox(height: 10),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                data['name'],
+                                style: GoogleFonts.mulish(
+                                  textStyle: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },

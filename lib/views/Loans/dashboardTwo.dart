@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ngao_app/constants/static_data.dart';
 
@@ -6,6 +7,7 @@ import '../../constants/colors.dart';
 import '../../constants/images.dart';
 import '../../widgets/custom_bottom_navigation.dart';
 import '../../widgets/floating_button.dart';
+import '../payment/payment_screen.dart';
 import 'custom_container.dart';
 import 'loan_app_bar.dart';
 import 'loan_card_two.dart';
@@ -65,7 +67,9 @@ class _DashboardTwoState extends State<DashboardTwo> {
                   loanList.length,
                   (index) {
                     return GestureDetector(
-                      onTap: () => {},
+                      onTap: () => {
+                        Get.to(const PaymentScreen()),
+                      },
                       child: CustomContainer(
                         bgColor: loanList[index]['color'],
                         name: loanList[index]['name'],

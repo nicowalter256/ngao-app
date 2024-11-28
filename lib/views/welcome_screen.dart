@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/colors.dart';
 import '../constants/images.dart';
 import '../widgets/custom_button.dart';
+import 'login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -70,7 +72,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
                 const SizedBox(height: 20),
                 CustomButton(
-                  onPress: () => {},
+                  onPress: () => {Get.to(const LoginScreen())},
                   name: "Join  the Ngao Loyalty Points",
                   btnColor: yellowBG,
                   textColor: whiteBG,

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../constants/images.dart';
 import '../../widgets/custom_bottom_navigation.dart';
 import '../../widgets/floating_button.dart';
+import 'dashboardTwo.dart';
 import 'loan_app_bar.dart';
 import 'loan_card.dart';
 
@@ -24,17 +26,21 @@ class _LoanDashboardState extends State<LoanDashboard> {
         child: Container(
           height: size.height,
           width: size.width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(regbackground),
               fit: BoxFit.cover,
             ),
           ),
-          child: const Column(
+          child: Column(
             children: [
-              LoanAppBar(title: "My Loans", hideNotification: false),
-              LoanCard(),
-              LoanCard(),
+              const LoanAppBar(title: "My Loans", hideNotification: false),
+              GestureDetector(
+                  onTap: () => {
+                        Get.to(const DashboardTwo()),
+                      },
+                  child: const LoanCard()),
+              const LoanCard(),
             ],
           ),
         ),

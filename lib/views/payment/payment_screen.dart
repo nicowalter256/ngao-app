@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ngao_app/constants/colors.dart';
 import 'package:ngao_app/widgets/custom_button.dart';
 
@@ -7,6 +8,7 @@ import '../../widgets/custom_border_text_field.dart';
 import '../../widgets/custom_bottom_navigation.dart';
 import '../../widgets/floating_button.dart';
 import '../Loans/loan_app_bar.dart';
+import 'payment_success.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
@@ -73,7 +75,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomButton(
-                    onPress: () => {},
+                    onPress: () => {
+                          Get.to(const PaymentSuccess()),
+                        },
                     name: "Make Payment",
                     btnColor: yellowBG,
                     textColor: whiteBG),

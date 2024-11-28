@@ -44,7 +44,7 @@ class CustomTextField extends StatelessWidget {
             height: 5,
           ),
           TextFormField(
-            style: const TextStyle(color: whiteBG),
+            style: const TextStyle(color: blackBG),
             initialValue: initailValue,
             controller: controller,
             keyboardType: keyboardType,

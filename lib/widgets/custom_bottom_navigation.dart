@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ngao_app/constants/colors.dart';
-
 import '../constants/images.dart';
+import '../views/Loans/dashboard.dart';
+import '../views/productScreen.dart';
 
 class BottomNavigationWidget extends StatelessWidget {
   const BottomNavigationWidget({super.key});
@@ -14,7 +15,14 @@ class BottomNavigationWidget extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       fixedColor: blackBG,
       unselectedItemColor: blackBG,
-      onTap: (value) {},
+      onTap: (value) {
+        if (value == 0) {
+          Get.to(const ProductScreen());
+        }
+        if (value == 1) {
+          Get.to(const LoanDashboard());
+        }
+      },
       items: [
         BottomNavigationBarItem(
           label: 'Branch locations',
