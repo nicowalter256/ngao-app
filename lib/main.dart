@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PaymentScreen(),
-      //home: const PageViewWidget(),
+      home: const RegisterScreen(),
+      //  home: const PageViewWidget(),
     );
   }
 }
