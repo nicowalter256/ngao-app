@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'views/Loans/apply/apply_loan.dart';
 import 'views/Loans/apply/loan_detail.dart';
+import 'views/Loans/apply/loan_success.dart';
 import 'views/Loans/dashboard.dart';
 import 'views/Loans/dashboardTwo.dart';
 import 'views/dashboard.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const LoadingScreen(),
-      //  home: const PageViewWidget(),
+      //home: const LoanApplySuccess(),
     );
   }
 }

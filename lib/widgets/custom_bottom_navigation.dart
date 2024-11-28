@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ngao_app/constants/colors.dart';
 import '../constants/images.dart';
+import '../views/Loans/apply/apply_loan.dart';
 import '../views/Loans/dashboard.dart';
-import '../views/productScreen.dart';
 
 class BottomNavigationWidget extends StatelessWidget {
   const BottomNavigationWidget({super.key});
@@ -17,7 +17,7 @@ class BottomNavigationWidget extends StatelessWidget {
       unselectedItemColor: blackBG,
       onTap: (value) {
         if (value == 0) {
-          Get.to(const ProductScreen());
+          Get.to(const ApplyLoan());
         }
         if (value == 1) {
           Get.to(const LoanDashboard());

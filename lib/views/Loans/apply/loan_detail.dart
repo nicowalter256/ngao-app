@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ngao_app/widgets/custom_button.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/images.dart';
@@ -6,6 +7,7 @@ import '../../../widgets/custom_bottom_navigation.dart';
 import '../../../widgets/floating_button.dart';
 import '../loan_app_bar.dart';
 import 'loan_detail_card.dart';
+import 'loan_success.dart';
 
 class LoanDetail extends StatefulWidget {
   const LoanDetail({super.key});
@@ -46,7 +48,9 @@ class _LoanDetailState extends State<LoanDetail> {
               child: CustomButton(
                 btnColor: yellowBG,
                 textColor: whiteBG,
-                onPress: () => {},
+                onPress: () => {
+                  Get.to(const LoanApplySuccess()),
+                },
                 name: "Apply Now",
               ),
             ),
