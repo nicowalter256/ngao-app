@@ -24,9 +24,11 @@ class _LoanDashboardState extends State<LoanDashboard> {
         child: Container(
           height: size.height,
           width: size.width,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(regbackground), fit: BoxFit.cover),
+              image: AssetImage(regbackground),
+              fit: BoxFit.cover,
+            ),
           ),
           child: const Column(
             children: [

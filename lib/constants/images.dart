@@ -31,3 +31,7 @@ const String indicator = '$baseImagePath/indicator.png';
 const String view = '$baseIconPath/view.png';
 const String payment = '$baseIconPath/payment.png';
 const String paymentSchedule = '$baseIconPath/payment_schedule.png';
+const String home = '$baseIconPath/home.png';
+const String home3 = '$baseIconPath/home3.png';
+const String success = '$baseImagePath/success.png';
+const String thanks = '$baseImagePath/thanks.png';

@@ -27,12 +27,17 @@ class _ProductScreenState extends State<ProductScreen> {
           children: [
             Container(
               height: size.height / 3.3,
-              width: double.infinity,
-              decoration: const BoxDecoration(
+              width: size.width,
+              decoration: BoxDecoration(
                 color: greenBG,
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20)),
+                image: DecorationImage(
+                  image: const AssetImage(home3),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.1),
+                    BlendMode.dstATop,
+                  ),
+                ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

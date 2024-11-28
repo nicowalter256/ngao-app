@@ -20,14 +20,20 @@ class LoanAppBar extends StatelessWidget {
     return Container(
       height: size.height / 3.5,
       width: size.width,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
         color: greenBG,
         image: DecorationImage(
-            image: AssetImage(loanBackground), fit: BoxFit.cover),
+          image: const AssetImage(loanBackground),
+          fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.white.withOpacity(0.1),
+            BlendMode.dstATop,
+          ),
+        ),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

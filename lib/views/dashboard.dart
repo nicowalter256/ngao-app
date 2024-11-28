@@ -12,19 +12,6 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  final Widget _fab = FloatingActionButton(
-    backgroundColor: Colors.red,
-    onPressed: () {},
-    child: Container(
-      decoration: const BoxDecoration(
-        color: deepGreyBG,
-        image: DecorationImage(
-          image: AssetImage(group),
-          fit: BoxFit.cover,
-        ),
-      ),
-    ),
-  );
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
@@ -47,36 +34,50 @@ class _DashboardScreenState extends State<DashboardScreen> {
       bottomNavigationBar: const BottomNavigationWidget(),
       backgroundColor: greenBG,
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              height: size.height / 2.2,
-              width: double.infinity,
-              color: greenBG,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 40, horizontal: 20),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Image.asset(logo),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Image.asset(greeting),
-                    ),
-                  ),
-                  const SizedBox(height: 40),
-                ],
+        child: Container(
+          height: size.height,
+          width: size.width,
+          decoration: BoxDecoration(
+            color: greenBG,
+            image: DecorationImage(
+              image: const AssetImage(home),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.white.withOpacity(0.1),
+                BlendMode.dstATop,
               ),
             ),
-            const Expanded(child: GrodViewWidget())
-          ],
+          ),
+          child: Column(
+            children: [
+              SizedBox(
+                height: size.height / 2.2,
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 40, horizontal: 20),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Image.asset(logo),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Image.asset(greeting),
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+                  ],
+                ),
+              ),
+              const Expanded(child: GrodViewWidget())
+            ],
+          ),
         ),
       ),
     );

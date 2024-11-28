@@ -26,9 +26,16 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Container(
           height: size.height,
           width: size.width,
-          decoration: const BoxDecoration(
-            image:
-                DecorationImage(image: AssetImage(loginBG), fit: BoxFit.cover),
+          decoration: BoxDecoration(
+            color: greenBG,
+            image: DecorationImage(
+              image: const AssetImage(home),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.white.withOpacity(0.1),
+                BlendMode.dstATop,
+              ),
+            ),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
